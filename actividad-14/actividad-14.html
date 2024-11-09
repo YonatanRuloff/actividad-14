@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de JavaScript - Hasta Página 14</title>
+</head>
+<body>
+    <h1>Guía de JavaScript - Ejercicios</h1>
+    
+    <h2>1. Variables y Entrada de datos</h2>
+    <script>
+        let nombre = prompt('Ingresa tu nombre:');
+        let sueldo = prompt('Ingresa tu sueldo:');
+        document.write('Hola ' + nombre + ', tu sueldo es de: ' + sueldo + '<br>');
+    </script>
+    
+    <h2>2. Estructuras secuenciales</h2>
+    <h3>Perímetro de un cuadrado</h3>
+    <script>
+        let lado = parseInt(prompt('Ingrese el lado del cuadrado en cm:'));
+        let perimetro = lado * 4;
+        document.write('El lado del cuadrado es: ' + lado + ' cm<br>');
+        document.write('El perímetro del cuadrado es: ' + perimetro + ' cm<br>');
+    </script>
+    
+    <h3>Suma y multiplicación de cuatro valores</h3>
+    <script>
+        let v1 = parseInt(prompt('Ingrese el valor uno:'));
+        let v2 = parseInt(prompt('Ingrese el valor dos:'));
+        let v3 = parseInt(prompt('Ingrese el valor tres:'));
+        let v4 = parseInt(prompt('Ingrese el valor cuatro:'));
+        let suma = v1 + v2 + v3 + v4;
+        let producto = v1 * v2 * v3 * v4;
+        document.write('La suma es: ' + suma + '<br>');
+        document.write('El producto es: ' + producto + '<br>');
+    </script>
+
+    <h2>3. Estructuras condicionales</h2>
+    <h3>Evaluación de promedio</h3>
+    <script>
+        let nota1 = parseInt(prompt('Ingrese la nota 1:'));
+        let nota2 = parseInt(prompt('Ingrese la nota 2:'));
+        let nota3 = parseInt(prompt('Ingrese la nota 3:'));
+        let promedio = (nota1 + nota2 + nota3) / 3;
+        if (promedio >= 7) {
+            document.write('Promocionado<br>');
+        } else {
+            document.write('No promocionado<br>');
+        }
+    </script>
+    
+    <h3>Número positivo, negativo o cero</h3>
+    <script>
+        let num = parseInt(prompt('Ingrese un número:'));
+        if (num > 0) {
+            document.write('El número es positivo<br>');
+        } else if (num < 0) {
+            document.write('El número es negativo<br>');
+        } else {
+            document.write('El número es cero<br>');
+        }
+    </script>
+
+    <h2>4. Estructuras repetitivas</h2>
+    <h3>While</h3>
+    <script>
+        let contador = 1;
+        let valor = 11;
+        while (contador <= 25) {
+            document.write('Número: ' + contador + ' Valor: ' + valor + '<br>');
+            contador++;
+            valor += 11;
+        }
+    </script>
+
+    <h3>Do/While</h3>
+    <script>
+        let i = 1;
+        do {
+            document.write('Número: ' + i + '<br>');
+            i++;
+        } while (i <= 5);
+    </script>
+
+    <h3>For</h3>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            document.write('Número ' + i + '<br>');
+        }
+    </script>
+
+    <h2>5. Funciones</h2>
+    <h3>Función con parámetros</h3>
+    <script>
+        function menor(a, b, c) {
+            return Math.min(a, b, c);
+        }
+        let n1 = parseInt(prompt('Ingrese el primer número:'));
+        let n2 = parseInt(prompt('Ingrese el segundo número:'));
+        let n3 = parseInt(prompt('Ingrese el tercer número:'));
+        document.write('El menor número es: ' + menor(n1, n2, n3) + '<br>');
+    </script>
+
+    <h2>6. Switch</h2>
+    <script>
+        let palabra = prompt('Ingrese una palabra: casa, mesa, perro, gato');
+        switch (palabra) {
+            case 'casa':
+                document.write('house<br>');
+                break;
+            case 'mesa':
+                document.write('table<br>');
+                break;
+            case 'perro':
+                document.write('dog<br>');
+                break;
+            case 'gato':
+                document.write('cat<br>');
+                break;
+            default:
+                document.write('Palabra no reconocida<br>');
+        }
+    </script>
+
+    <h2>7. Clase Date</h2>
+    <script>
+        let hoy = new Date();
+        document.write('Hoy es: ' + hoy.toDateString() + '<br>');
+    </script>
+
+    <h2>8. Arrays</h2>
+    <h3>Métodos básicos</h3>
+    <script>
+        let frutas = ['manzana', 'pera', 'uva'];
+        frutas.push('naranja');
+        document.write('Frutas: ' + frutas.join(', ') + '<br>');
+        frutas.pop();
+        document.write('Frutas después de pop: ' + frutas.join(', ') + '<br>');
+    </script>
+
+    <h2>9. Eventos</h2>
+    <h3>OnClick</h3>
+    <button onclick="alert('¡Hola!')">Haz clic aquí</button>
+</body>
+</html>
+
+    <h2>10. Programación Orientada a Objetos</h2>
+    <h3>Clase Date</h3>
+    <script>
+        let hoy = new Date();
+        document.write('Hoy es: ' + hoy.toDateString() + '<br>');
+        document.write('Hora actual: ' + hoy.toLocaleTimeString() + '<br>');
+    </script>
+
+    <h3>Clase Array</h3>
+    <script>
+        let numeros = [5, 10, 15, 20, 25];
+        document.write('Array original: ' + numeros.join(', ') + '<br>');
+        numeros.push(30);
+        document.write('Array después de push: ' + numeros.join(', ') + '<br>');
+        numeros.pop();
+        document.write('Array después de pop: ' + numeros.join(', ') + '<br>');
+    </script>
+
+    <h3>Clase Math</h3>
+    <script>
+        let numero = 16;
+        document.write('Raíz cuadrada de ' + numero + ' es: ' + Math.sqrt(numero) + '<br>');
+        document.write('Número aleatorio: ' + Math.random() + '<br>');
+    </script>
+
+    <h3>Clase String</h3>
+    <script>
+        let texto = "JavaScript es genial";
+        document.write('Texto original: ' + texto + '<br>');
+        document.write('En mayúsculas: ' + texto.toUpperCase() + '<br>');
+        document.write('En minúsculas: ' + texto.toLowerCase() + '<br>');
+        document.write('Subcadena (0,10): ' + texto.substring(0, 10) + '<br>');
+    </script>
+
+    <h2>11. Formularios y Eventos</h2>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="opciones">Selecciona una opción:</label>
+        <select id="opciones" name="opciones">
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+        </select><br><br>
+        <label><input type="checkbox" id="terminos" name="terminos"> Acepto los términos y condiciones</label><br><br>
+        <button type="button" onclick="enviarFormulario()">Enviar</button>
+    </form>
+    <script>
+        function enviarFormulario() {
+            let nombre = document.getElementById('nombre').value;
+            let password = document.getElementById('password').value;
+            let opcion = document.getElementById('opciones').value;
+            let terminos = document.getElementById('terminos').checked;
+            document.write('Nombre: ' + nombre + '<br>');
+            document.write('Contraseña: ' + password + '<br>');
+            document.write('Opción seleccionada: ' + opcion + '<br>');
+            document.write('Términos aceptados: ' + (terminos ? 'Sí' : 'No') + '<br>');
+        }
+    </script>
+
+    <h3>Eventos onMouseOver y onMouseOut</h3>
+    <div style="width: 200px; height: 100px; background-color: lightblue;" 
+         onmouseover="this.style.backgroundColor='yellow'" 
+         onmouseout="this.style.backgroundColor='lightblue'">
+        Pasa el mouse por aquí
+    </div>
+
+    <h3>Propiedad location del objeto window</h3>
+    <script>
+        document.write('URL actual: ' + window.location.href + '<br>');
+    </script>
+
+    <h3>Propiedad history del objeto window</h3>
+    <script>
+        document.write('Entradas en el historial: ' + window.history.length + '<br>');
+    </script>
+
+    <h3>Propiedad screen del objeto window</h3>
+    <script>
+        document.write('Resolución de pantalla: ' + window.screen.width + 'x' + window.screen.height + '<br>');
+    </script>
+
+    <h3>Propiedad navigator del objeto window</h3>
+    <script>
+        document.write('Nombre del navegador: ' + window.navigator.appName + '<br>');
+        document.write('Versión: ' + window.navigator.appVersion + '<br>');
+    </script>
+
+    <h2>12. Arrays avanzados</h2>
+    <h3>Método splice</h3>
+    <script>
+        let frutas = ['manzana', 'pera', 'uva', 'naranja'];
+        document.write('Array original: ' + frutas.join(', ') + '<br>');
+        frutas.splice(1, 2, 'fresa', 'mango');
+        document.write('Array después de splice: ' + frutas.join(', ') + '<br>');
+    </script>
+
+    <h3>Método join</h3>
+    <script>
+        let palabras = ['JavaScript', 'es', 'increíble'];
+        document.write('Unión con espacios: ' + palabras.join(' ') + '<br>');
+    </script>
+
+    <h3>Funciones: setTimeout</h3>
+    <script>
+        setTimeout(() => {
+            document.write('Este mensaje aparece después de 60 segundos<br>');
+        }, 60000);
+    </script>
+
+    <h3>Expresiones regulares</h3>
+    <script>
+        let texto = "JavaScript es genial";
+        let regex = /JavaScript/;
+        document.write('¿Contiene "JavaScript"? ' + regex.test(texto) + '<br>');
+    </script>
